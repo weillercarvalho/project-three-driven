@@ -135,22 +135,29 @@ body {
         bottom: 0px;
         left: 0px;
         background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
     }
     .end {
         width: 364px;
         height: 61px;
-        margin-top: 15px;
-        margin-left: 25px;
         background-color: #cbcbcb;
         border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .end-one {
         font-family: 'Roboto';
         font-weight: 400;
-        color: #ffffff;
         font-size: 20px;
-        font-style: normal;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        line-height: 23.44px;
         text-align: center;
+        letter-spacing: 0.018em;
+        color: #ffffff;
+        width: 210px;
+        height: 46px;
     }
 }
