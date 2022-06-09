@@ -71,9 +71,9 @@ body {
     .images {
         display: flex;
         margin-top: 17px;
-        justify-content: space-between;
-        width: 586px;
+        width: 100%;
         overflow-x: scroll;
+
     }
     .subimages {
         position: relative;
@@ -84,6 +84,7 @@ body {
         border-radius: 9px;
         display: flex;
         flex-direction: column;
+        
     }
     img {
         width: 144px;
