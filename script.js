@@ -5,6 +5,22 @@ let d;
 let e;
 let f;
 let g;
+let h;
+let i;
+let j;
+let x;
+let y;
+let z;
+let food;
+let drink;
+let dessert;
+let costFood;
+let costDrink;
+let costDessert;
+let total;
+let wpp;
+let wppmsg;
+let uri;
 
 function foods(elemento) {
     
@@ -42,6 +58,36 @@ function desserts(elemento) {
     elemento.classList.add("clique");
     verified();
 }
+function foodscircle(elemento) {
+
+    j = elemento.querySelector(`.food .off`)
+    i = document.querySelector(`.food .on`);
+    if (i !== null) {
+        i.classList.remove(`on`)
+    }
+    
+    j.classList.add(`on`)
+} 
+function drinkscircle(elemento) {
+
+    j = elemento.querySelector(`.drink .off`)
+    i = document.querySelector(`.drink .on`);
+    if (i !== null) {
+        i.classList.remove(`on`)
+    }
+    
+    j.classList.add(`on`)
+} 
+function dessertscircle(elemento) {
+
+    j = elemento.querySelector(`.dessert .off`)
+    i = document.querySelector(`.dessert .on`);
+    if (i !== null) {
+        i.classList.remove(`on`)
+    }
+    
+    j.classList.add(`on`)
+} 
 function verified() {
     if (d && e && f){
         g = document.querySelector(`.end-one`);
@@ -53,5 +99,20 @@ function verified() {
     }
 }
 function sendmessage(){
+    food = document.querySelector(`.food  .clique .text-one`).textContent;
+    drink = document.querySelector(`.drink  .clique .text-one`).textContent;
+    dessert = document.querySelector(`.dessert  .clique .text-one`).textContent;
+    costFood = document.querySelector(`.food  .clique span`).textContent;
+    costDrink = document.querySelector(`.drink  .clique span`).textContent;
+    costDessert = document.querySelector(`.dessert  .clique span`).textContent;
 
+    costFood = Number(costFood.replace(",","."));
+    costDrink = Number(costDrink.replace(",","."));
+    costDessert = Number(costDessert.replace(",","."));
+    total = (costFood + costDrink + costDessert).toFixed(2);
+    wpp = `https://wa.me/5586981366094?text=`;
+    wppmsg = `Olá, gostaria de fazer o pedido: \n- Prato: ${food} \n- Bebida: ${drink} \n- Sobremesa: ${dessert} \n  Total: R$ ${total}`;
+    console.log(wppmsg);
+    uri = encodeURIComponent(wppmsg);
+    window.open(wpp + uri, `_blank`)
 }
