@@ -60,30 +60,6 @@ function desserts(elemento) {
     elemento.classList.add("clique");
     verified();
 }
-function foodscircle(elemento) {
-
-    j = document.querySelector(`.food .green ion-icon`);
-    if (j !== null) {
-        j.classList.remove(`green`);
-    }
-    elemento.classList.add(`green`)
-} 
-function drinkscircle(elemento) {
-
-    i = document.querySelector(`.drink .green ion-icon`);
-    if (i !== null) {
-        i.classList.remove(`green`);
-    }
-    elemento.classList.add(`green`)
-} 
-function dessertscircle(elemento) {
-
-    h = document.querySelector(`.dessert .green ion-icon`);
-    if (h !== null) {
-        h.classList.remove(`green`);
-    }
-    elemento.classList.add(`green`)
-} 
 function verified() {
     if (d && e && f){
         g = document.querySelector(`.end-one`);
