@@ -62,33 +62,27 @@ function desserts(elemento) {
 }
 function foodscircle(elemento) {
 
-    j = elemento.querySelector(`.food .off`)
-    i = document.querySelector(`.food .on`);
-    if (i !== null) {
-        i.classList.remove(`on`)
+    j = document.querySelector(`.food .green ion-icon`);
+    if (j !== null) {
+        j.classList.remove(`green`);
     }
-    
-    j.classList.add(`on`)
+    elemento.classList.add(`green`)
 } 
 function drinkscircle(elemento) {
 
-    j = elemento.querySelector(`.drink .off`)
-    i = document.querySelector(`.drink .on`);
+    i = document.querySelector(`.drink .green ion-icon`);
     if (i !== null) {
-        i.classList.remove(`on`)
+        i.classList.remove(`green`);
     }
-    
-    j.classList.add(`on`)
+    elemento.classList.add(`green`)
 } 
 function dessertscircle(elemento) {
 
-    j = elemento.querySelector(`.dessert .off`)
-    i = document.querySelector(`.dessert .on`);
-    if (i !== null) {
-        i.classList.remove(`on`)
+    h = document.querySelector(`.dessert .green ion-icon`);
+    if (h !== null) {
+        h.classList.remove(`green`);
     }
-    
-    j.classList.add(`on`)
+    elemento.classList.add(`green`)
 } 
 function verified() {
     if (d && e && f){
