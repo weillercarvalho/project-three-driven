@@ -21,6 +21,8 @@ let total;
 let wpp;
 let wppmsg;
 let uri;
+let names;
+let adress;
 
 function foods(elemento) {
     
@@ -105,14 +107,14 @@ function sendmessage(){
     costFood = document.querySelector(`.food  .clique span`).textContent;
     costDrink = document.querySelector(`.drink  .clique span`).textContent;
     costDessert = document.querySelector(`.dessert  .clique span`).textContent;
-
+    names = prompt(`Digite seu nome:`);
+    adress = prompt(`Digite seu endereço`);
     costFood = Number(costFood.replace(",","."));
     costDrink = Number(costDrink.replace(",","."));
     costDessert = Number(costDessert.replace(",","."));
     total = (costFood + costDrink + costDessert).toFixed(2);
     wpp = `https://wa.me/5586981366094?text=`;
-    wppmsg = `Olá, gostaria de fazer o pedido: \n- Prato: ${food} \n- Bebida: ${drink} \n- Sobremesa: ${dessert} \n  Total: R$ ${total}`;
-    console.log(wppmsg);
+    wppmsg = `Olá, gostaria de fazer o pedido: \n- Prato: ${food} \n- Bebida: ${drink} \n- Sobremesa: ${dessert} \nTotal: R$ ${total} \n\nNome: ${names} \nEndereço: ${adress}`;
     uri = encodeURIComponent(wppmsg);
     window.open(wpp + uri, `_blank`)
 }
